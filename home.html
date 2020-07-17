@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en-US">
+ <head> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>Team INDIA</title> 
+ </head> 
+ <body> 
+  <h1> 
+   <marquee direction="alternate">
+     INDIA CRICKET PLAYERS 
+   </marquee> </h1> 
+  <style>
+   body{
+  background-image:url(bg.png);
+}
+header{
+  font-weight:bold;
+  text-align: center;
+  font-family:Times New Roman;
+  border:2px solid black;
+  font-size:200%;
+  background-color:yellow;
+  
+}
+.card{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-around;
+  font-size:180%;
+  font-weight:bold;
+  font-family:Times New Roman;
+}
+.details{
+ border:2px solid black;
+ width:400px;
+ margin:20px;
+ padding:10px;
+ border-radius:10px;
+ transition:1s;
+}
+.details:hover{
+ width:430px;
+ box-shadow:4px 4px 4px 5px black;
+}
+img{
+  display:flex;
+  flex-wrap:wrap;
+  border:1px solid black;
+  border-radius:20px;
+  justify-content:center;
+  margin-left:50px;
+}
+footer{
+  font-weight:bold;
+  text-align:center;
+  border:2px solid black;
+  border-radius:3px;
+}
+ </style> 
+  <script>
+     var ids={
+     india:[
+       {
+       FULLNAME     :"Shikhar Dhawan",
+      BORN          :"Dec 5,1985,Delhi",
+      AGE           :"34 Years",
+      BATTINGSTYLE :"Left Handed"
+       },
+       {
+       FULLNAME     :"Rohit Gurunath Sharma",
+       BORN          :"April 30, 1987,Maharashtra",
+       AGE           :"33 Years",
+       BATTINGSTYLE :"Right Handed"
+       },
+       {
+       FULLNAME    :"Virat Kohli",
+      BORN          :"November 5, 1988,Delhi",
+      AGE           :"31 Years",
+      BATTINGSTYLE :"Right Handed"
+       },
+       {
+       FULLNAME     :"Kannaur Lokesh Rahul",
+       BORN          :"April 18, 1992,Bangalore, Karnataka",
+       AGE           :"28 Years",
+       BATTINGSTYLE :"Right Handed"
+       },
+       {
+       FULLNAME     :"Manish Krishnanand Pandey",
+       BORN          :"September 10, 1989",
+       AGE           :"30 Years",
+       BATTINGSTYLE :"Right Handed"
+       },
+       {
+       FULLNAME     :"Ajinkya Madhukar Rahane",
+       BORN          :"June 6, 1988,Maharashtra",
+       AGE           :"32 Years",
+       BATTINGSTYLE :"Right Handed"
+       },
+       {
+       FULLNAME     :"Shreyas Santosh Iyer",
+       BORN          :"December 6, 1994,Mumbai",
+       AGE           :"25 Years",
+       BATTINGSTYLE :"Right Handed"
+       }
+       ]
+     
+}
+var body =document.body;
+var card = document.createElement ("div");
+card.classList.add("card");
+body.append(card);
+for(var i =0; i < ids.india.length; i++)
+{
+var details =document.createElement("div");
+details.classList.add("details");
+card.append(details);
+
+var fullName = document.createElement("p");
+fullName.textContent="FULL NAME: "+ids.india[i].FULLNAME;
+details.append(fullName);
+
+var born = document.createElement("p");
+born.textContent="BORN: "+ids.india[i].BORN;
+details.append(born);
+
+var age = document.createElement("p");
+age.textContent="AGE: "+ids.india[i].AGE;
+details.append(age);
+ 
+}
+
+ </script> 
+ </body>
+</html>
